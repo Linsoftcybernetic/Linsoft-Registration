@@ -1,0 +1,7 @@
+{% if selected_item %}
+    <div id="course-details">
+        <p id="duration">{{ selected_item.duration }}</p>
+        <p id="instructor">{{ selected_item.instructor }}</p>
+        <p id="amount">{{ selected_item.cost }}</p>
+    </div>
+{% endif %}
