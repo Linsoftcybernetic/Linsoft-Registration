@@ -25,6 +25,12 @@ pay.addEventListener('click', () => {
     }
 });
 
+document.getElementById("registration-form").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault(); // Prevent the form from submitting
+    }
+});
+
 /* select.addEventListener('change', () => {
     if (select.value === "0") {
         cyber.style.display = 'block';
