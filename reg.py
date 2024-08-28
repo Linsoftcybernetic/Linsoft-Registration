@@ -40,7 +40,7 @@ def mail(to_email,subject, body):
 
     msg = EmailMessage()
     msg['Subject'] = subject
-    msg['From'] = 'jadevictor247@gmail.com'
+    msg['From'] = 'no-reply@academy.linsoftcybernetic.com'
     msg['To'] = to_email
 
     msg.set_content(body,'plain')
@@ -55,8 +55,8 @@ def mail(to_email,subject, body):
     # """, subtype='html')
 
     try:
-        with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
-            smtp.login('jadevictor247@gmail.com', 'rfhi sawh bgjo itda')
+        with smtplib.SMTP_SSL('academy.linsoftcybernetic.com', 465) as smtp:
+            smtp.login('no-reply@academy.linsoftcybernetic.com', 'linsoftcybernetic_1189')
             smtp.send_message(msg)
     except Exception as e:
         flash ('Failed to send email')
