@@ -13,7 +13,8 @@ app=Flask(__name__)
 CORS(app)
 app = Flask(__name__)
 app.config['SECRET-KEY'] = "jadesql_password"
-app.secret_key = 'your_secret_key_here'  
+app.secret_key = 'your_secret_key_here'
+application = app 
 
 # Database configuration
 db_config = {
