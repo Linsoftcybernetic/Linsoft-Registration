@@ -62,9 +62,9 @@ def mail(to_email,subject, body):
         flash ('Failed to send email')
 
 @app.route('/')
-@app.route('/home')
-def home():
-    return render_template('index.html')
+# @app.route('/home')
+# def home():
+#     return render_template('register.html')
 
 # @app.route('/courses/', methods=['GET'])
 # def courses():
