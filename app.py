@@ -9,12 +9,12 @@ import smtplib
 # import imghdr
 from email.message import EmailMessage
 
-app=Flask(__name__)
-CORS(app)
 app = Flask(__name__)
+application = app 
+CORS(app)
+# app = Flask(__name__)
 app.config['SECRET-KEY'] = "jadesql_password"
 app.secret_key = 'your_secret_key_here'
-application = app 
 
 # Database configuration
 db_config = {
@@ -37,7 +37,6 @@ def mail(to_email,subject, body):
     EMAIL_PASSWORD = os.environ.get('EMAIL_PASS')
 
     # contacts = ['joy49867@gmail.com', 'philipobinna871@gmail.com', 'martinsonuchukwuchimdinyerem@gmail.com']
-
 
     msg = EmailMessage()
     msg['Subject'] = subject
