@@ -90,8 +90,8 @@ def register():
     connection = get_db()
     if connection is None:
         flash('Database connection failed!', 'error')
-        return redirect(url_for('register'))
-        # return jsonify({'success': False, 'message': 'db error', 'data': ''})
+        # return redirect(url_for('register'))
+        return jsonify({'success': False, 'message': 'db error', 'data': ''})
     
     items = []  # Initialize items with an empty list
     selected_item = None  # Initialize selected_item with None
